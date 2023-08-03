@@ -6,18 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hyper</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
+        html {
+            --ct-body-bg: #fafbfe;
+            --ct-topbar-item-color: #6c757d;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h5 {
+            font-size: .936rem;
+        }
+
+        h6 {
+            font-size: .765rem;
+        }
+
+        .bi-nav {
+            font-size: 22px;
+        }
+
+        .bi-small {
+            font-size: 10px;
+            color: var(--ct-topbar-item-color);
+        }
+
         * {
             box-sizing: border-box;
         }
+
+        body {
+            background-color: var(--ct-body-bg);
+        }
+
         .wrapper {
             height: 100%;
             height: 100%;
         }
-        .navbar{
+
+        .navbar>.container {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: unset;
+        }
+
+        .navbar {
+            --bs-navbar-padding-x: 0;
+            --bs-navbar-padding-y: 0;
+            --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+            --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+            --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+            --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-brand-padding-y: 0;
+            --bs-navbar-brand-margin-end: 1rem;
+            --bs-navbar-brand-font-size: 1.25rem;
+            --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-nav-link-padding-x: 0;
+            --bs-navbar-toggler-padding-y: 0;
+            --bs-navbar-toggler-padding-x: 0;
+            --bs-navbar-toggler-font-size: 1.25rem;
+            --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+            --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+            --bs-navbar-toggler-focus-width: 0.25rem;
+            --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+        }
+
+        .navbar {
             position: sticky;
             top: 0;
+            height: 70px;
         }
+
+        .nav-color {
+            color: var(--ct-topbar-item-color);
+        }
+
+        .country-img {
+            height: 12px;
+        }
+
+        .list {
+            width: 24px;
+            color: #6E757C;
+        }
+
+        .icon {
+            display: inline-block;
+            color: #6E757C;
+        }
+
+        .bi-search {
+            line-height: 38px;
+            left: 10px;
+        }
+
+
+
+        .avatar {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-user {
+            gap: 10px;
+            padding: 0 12px;
+            background: #fafafd;
+            height: 70px;
+        }
+
+        .navbar-brand {
+            width: 24px;
+
+        }
+
+        #nav-search {
+            background-color: #727DF4;
+            color: #fff;
+            border-radius: 0;
+        }
+
+        .form-control {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            width: 217px;
+            height: 38px;
+            padding: 7px 20px 7px 40px;
+            background-color: #f0f3f8;
+        }
+
         .m-s-260 {
             margin-left: 260px;
         }
@@ -63,31 +200,43 @@
                 <a href="#">Page</a>
             </nav>
         </div>
-                <!-- 2.nav -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary m-s-260">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-                <!-- <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                </div> -->
+        <!-- 2.nav -->
+        <nav class="navbar-expand-lg m-s-260 bg-white">
+            <div class="container-fluid navbar">
+                <div class="d-flex">
+                    <a href="#"><img src="./img/icon/logo-dark-sm.png" alt=""></a>
+                    <a class="navbar-brand ms-3 me-4" href="#"><i class="bi bi-list bi-nav"></i></a>
+                    <div class="d-none d-lg-block">
+                        <form class="d-flex position-relative" role="search">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <i class="bi bi-search position-absolute bi-nav icon"></i>
+                            <button class="btn btn-outline-success" type="submit" id="nav-search">Search</button>
+                        </form>
+                    </div>
+
+                </div>
+                <ul class="d-flex gap-4 align-items-center">
+                    <li><a href="#"><i class="bi bi-search icon d-lg-none bi-nav"></i></a></li>
+                    <li><a href="#" class="d-flex align-items-center"><img class="country-img me-1"
+                                src="./img/icon/us.jpg" alt=""><span
+                                class="nav-color me-1 d-none d-lg-block">English</span><i
+                                class="bi bi-chevron-down bi-small d-none d-lg-block"></i></a></li>
+                    <li><a href="#"><i class="bi bi-bell icon bi-nav"></i></a></li>
+                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-app-indicator icon bi-nav"></i></a></li>
+                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-gear icon bi-nav"></i></a></li>
+                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-moon icon bi-nav"></i></a></li>
+                    <li class="d-none d-md-block"><a href="#"><i class="bi bi-fullscreen icon bi-nav"></i></a></li>
+                    <li><a href="#" class="d-flex align-items-center nav-user">
+                            <img class="avatar" src="./img/icon/avatar-1.jpg" alt="">
+                            <div class="d-flex flex-column gap-1 d-none d-lg-block">
+                                <h5 class="my-0 nav-color">Dominic Keller</h5>
+                                <h6 class="my-0 nav-color">Founder</h6>
+                            </div>
+                        </a></li>
+                </ul>
             </div>
+
+
         </nav>
         <div class="container text-center m-s-260">
             <div class="row">
