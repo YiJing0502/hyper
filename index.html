@@ -39,10 +39,33 @@
             margin: 0;
             line-height: 25px;
             /* 原75 */
-            text-decoration: none;
-            overflow: hidden; 
+            overflow: hidden;
             text-overflow: ellipsis;
             /* /* /* ? */
+        }
+        #tooltip-container-1{
+            width: 630px;
+            height: 15px;
+            background-color: aquamarine;
+        }
+        /* .line{
+            width: 33%;
+            height: 3px;
+            background-color: rgb(198, 46, 16);
+        } */
+        
+        .round{
+            width: 14.4px;
+            height: 14.4px;
+            background-color: blue;
+            border-radius:50%;
+            border: 0.25em solid var(--ct-body-bg);
+            /* ? */
+        }
+        .process-line{
+            width: 100%;
+            height: 3px;
+            /* background-color: darkgray; */
         }
     </style>
 </head>
@@ -103,24 +126,48 @@
                 </div> -->
             </div>
         </nav>
-        <div class="container text-center m-s-260">
+        <div class="container text-center m-s-260 bg-secondary-subtle">
             <!-- <div class="container-fluid  bg-primary"></div> -->
             <div class="row">
-                <div class="page-title-box ">
-                    <ul class="breadcrumb ">
-                        <li  class="col-10  text-start border border-primary">
-                            Order Details
-                        </li>
-                        <li class="col-2 border border-primary fs-6 text-start">
-                            <a href="#" >Hyper</a>
-                            <i class="bi bi-chevron-right"></i>
-                            <p>Order Details</p>
-                        </li>
-                    </ul>
+                <!-- -xxl -->
+                <div class="col-12">
+                    <div class="page-title-box mt-4 ">
+                        <ul class="breadcrumb d-flex justify-content-between">
+                            <li class="border border-primary ">
+                                Order Details
+                            </li>
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                <ol class="breadcrumb d-flex fs-6">
+                                    <li class="breadcrumb-item "><a href="#" class="text-decoration-none">Hyper</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                                            class="text-decoration-none">eCommerce</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+                                </ol>
+                            </nav>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-10 col-sm-11">
+                        <div class="horizontal-steps mt-4 mb-4 pb-5">
+                            <div class="horizontal-steps-content"  id="tooltip-container-1">
+                                <div class="d-flex justify-content-between d-flex align-items-center process-line --bs-secondary-bg-rgb " id=" ">
+                                    <!-- <div class="process ">  -->
+                                    <div class="round "></div>
+                                    <div class="round "></div>
+                                    <div class="round "></div>
+                                    <div class="round "></div>
+                                </div>
+                        </div>
+                    </div>
+                        
+
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- <div class="col">
+            <!-- <div class="step item-1"> -->
+            <!-- <div class="col">
                     Column
                 </div>
                 <div class="col">
@@ -129,7 +176,7 @@
                 <div class="col">
                     Column
                 </div> -->
-    </div>
+        </div>
     </div>
     </div>
 
