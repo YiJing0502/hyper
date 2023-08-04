@@ -233,6 +233,8 @@
 
         .func-menu {
             padding: 0;
+            height: 100%;
+            padding-bottom: 150px;
         }
 
         .func-item-title {
@@ -246,6 +248,7 @@
             padding: 15px 10px;
             color: #8391a2;
         }
+
         .func-a:hover {
             color: #a9bbd1;
 
@@ -261,6 +264,22 @@
         .badge {
 
             margin-top: 7px;
+        }
+
+        .help-box {
+            border-radius: 10px;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.07);
+            padding: 20px;
+            margin: 65px 25px 25px;
+        }
+
+        .bi-x {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            font-size: 20px;
+            color: #fff;
         }
 
 
@@ -282,109 +301,7 @@
     <div class="wrapper">
 
 
-        <div class="side-menu">
-            <a class="logo justify-content-center align-items-center" href="">
-                <span class="logo-lg">
-                    <img src="./img/icon/logo-lg.png" alt="">
-                </span>
-                <span class="logo-sm">
-                    <img src="./img/icon/logo-dark-sm.png" alt="">
-                </span>
-            </a>
-            <ul class="func-menu">
-                <li class="func-item-title">Navigation</li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-house func-i"></i>
-                        <span class="badge bg-success float-end">5</span>
-                        <span>Dashboards</span>
-                    </a>
-                </li>
-                <li class="func-item-title">Apps</li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-calendar func-i"></i>                        <span>Calendar</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-chat-right-text func-i"></i>                        
-                        <span>Chat</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-compass func-i"></i> 
-                        <span class="badge text-bg-danger  float-end">New</span>                       
-                        <span>CRM</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-shop func-i"></i> 
-                        <span>Ecommerce</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-envelope func-i"></i> 
-                        <span>Email</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-briefcase-fill func-i"></i> 
-                        <span>Projects</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-wifi func-i"></i> 
-                        <span>Social Feed</span>
-                    </a>
-                </li>
-                <li class="func-item">
-                    <a href="#" class="func-a">
-                        <i class="bi bi-list-task func-i"></i> 
-                        <span>Tasks</span>
-                    </a>
-                </li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-                <li class="func-item"></li>
-            </ul>
-            <!-- <nav class="d-flex flex-column">
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-            </nav> -->
 
-        </div>
         <!-- 2.nav -->
         <nav class="navbar-expand-lg m-s-260 bg-white">
             <div class="container-fluid navbar">
@@ -422,7 +339,7 @@
                     <li><a href="#"><i class="bi bi-bell icon bi-nav"></i></a></li>
                     <li class="d-none d-sm-block"><a href="#">
 
-                            <i class="bi bi-app-indicator icon bi-nav"></i></a></li>
+                            <i class="bi bi-grid icon bi-nav"></i></a></li>
                     <li class="d-none d-sm-block"><a href="#"><i class="bi bi-gear icon bi-nav"></i></a></li>
                     <li class="d-none d-sm-block"><a href="#"><i class="bi bi-moon icon bi-nav"></i></a></li>
                     <li class="d-none d-md-block"><a href="#"><i class="bi bi-fullscreen icon bi-nav"></i></a></li>
@@ -438,6 +355,197 @@
 
 
         </nav>
+        <div class="side-menu">
+            <a class="logo justify-content-center align-items-center" href="">
+                <span class="logo-lg">
+                    <img src="./img/icon/logo-lg.png" alt="">
+                </span>
+                <span class="logo-sm">
+                    <img src="./img/icon/logo-dark-sm.png" alt="">
+                </span>
+            </a>
+            <ul class="func-menu  overflow-y-scroll">
+                <li class="func-item-title">Navigation</li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-house func-i"></i>
+                        <span class="badge bg-success float-end">5</span>
+                        <span>Dashboards</span>
+                    </a>
+                </li>
+                <li class="func-item-title">Apps</li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-calendar func-i"></i> <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-chat-right-text func-i"></i>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-compass func-i"></i>
+                        <span class="badge text-bg-danger  float-end">New</span>
+                        <span>CRM</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-shop func-i"></i>
+                        <span>Ecommerce</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-envelope func-i"></i>
+                        <span>Email</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-briefcase-fill func-i"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-wifi func-i"></i>
+                        <span>Social Feed</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-list-task func-i"></i>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-folder2 func-i"></i>
+                        <span>File Manager</span>
+                    </a>
+                </li>
+                <li class="func-item-title">Custom</li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-file-earmark func-i"></i>
+                        <span>Pages</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-globe func-i"></i>
+                        <span class="badge text-bg-secondary float-end">New</span>
+                        <span>Landing</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-layout-three-columns func-i"></i>
+                        <span>Layouts</span>
+                    </a>
+                </li>
+                <li class="func-item-title">Components</li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-box-seam func-i"></i>
+                        <span>Base UI</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-clipboard2 func-i"></i>
+                        <span>Extended UI</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-layers-half func-i"></i>
+                        <span>Widgets</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-palette func-i"></i>
+                        <span>Icons</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-bar-chart func-i"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-file-text func-i"></i>
+                        <span>Forms</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-table func-i"></i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-table func-i"></i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-geo-alt func-i"></i>
+                        <span>Maps</span>
+                    </a>
+                </li>
+                <li class="func-item">
+                    <a href="#" class="func-a">
+                        <i class="bi bi-folder-plus func-i"></i>
+                        <span>Multi Level</span>
+                    </a>
+                </li>
+                <!-- help box -->
+                <div class="help-box d-flex flex-column align-items-center">
+                    <i class="bi bi-x"></i>
+                    <img src="./img/icon/help-icon.svg" alt="Helper Icon Image" height="90">
+                    <h5 class="mt-4 text-white">Unlimited Access</h5>
+                    <p class="text-white text-center">Upgrade to plan to get access to unlimited reports</p>
+                    <button type="button" class="btn btn-secondary">Upgrade</button>
+
+                </div>
+
+            </ul>
+            <!-- <nav class="d-flex flex-column">
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+                <a href="#">Page</a>
+            </nav> -->
+
+        </div>
         <div class="container text-center m-s-260">
             <div class="row">
                 <div class="col">
