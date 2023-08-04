@@ -52,6 +52,7 @@
 
         body {
             background-color: var(--ct-body-bg);
+            display: flex;
         }
 
         .wrapper {
@@ -198,15 +199,12 @@
             background-color: #f0f3f8;
         }
 
-        .m-s-260 {
-            margin-left: 260px;
-        }
+        
 
         .side-menu {
-            width: 260px;
+            width: 334px;
             height: 100%;
             background-color: #313A46;
-            position: fixed;
         }
 
 
@@ -298,64 +296,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
-
-
-
-        <!-- 2.nav -->
-        <nav class="navbar-expand-lg m-s-260 bg-white">
-            <div class="container-fluid navbar">
-                <div class="d-flex">
-                    <a href="#"><img class="nav-logo-sm" src="./img/icon/logo-dark-sm.png" alt=""></a>
-                    <a class="navbar-brand ms-3 me-4" href="#"><i class="bi bi-list bi-nav"></i></a>
-                    <div class="d-none d-lg-block">
-                        <form class="d-flex position-relative" role="search">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            <i class="bi bi-search position-absolute bi-nav icon"></i>
-                            <button class="btn btn-outline-success" type="submit" id="nav-search">Search</button>
-                        </form>
-                    </div>
-                </div>
-                <ul class="d-flex gap-4 align-items-center">
-                    <li><a href="#"><i class="bi bi-search icon d-lg-none bi-nav"></i></a></li>
-                    <li>
-                        <div class="btn-group" role="group">
-                            <button type="button"
-                                class="btn btn-primary dropdown-toggle contry-btn d-flex align-items-center justify-content-center"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="country-img me-1" src="./img/icon/us.jpg" alt="">
-                                <span class="nav-color me-1 d-none d-lg-block">English</span>
-                                <i class="bi bi-chevron-down bi-small"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-                            </ul>
-                        </div>
-                        <a href="#" class="">
-                        </a>
-                    </li>
-
-                    <li><a href="#"><i class="bi bi-bell icon bi-nav"></i></a></li>
-                    <li class="d-none d-sm-block"><a href="#">
-
-                            <i class="bi bi-grid icon bi-nav"></i></a></li>
-                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-gear icon bi-nav"></i></a></li>
-                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-moon icon bi-nav"></i></a></li>
-                    <li class="d-none d-md-block"><a href="#"><i class="bi bi-fullscreen icon bi-nav"></i></a></li>
-                    <li><a href="#" class="d-flex align-items-center nav-user">
-                            <img class="avatar" src="./img/icon/avatar-1.jpg" alt="">
-                            <div class="d-flex flex-column gap-1 d-none d-lg-block">
-                                <h5 class="my-0 nav-color">Dominic Keller</h5>
-                                <h6 class="my-0 nav-color">Founder</h6>
-                            </div>
-                        </a></li>
-                </ul>
-            </div>
-
-
-        </nav>
-        <div class="side-menu">
+    <div class="side-menu">
             <a class="logo justify-content-center align-items-center" href="">
                 <span class="logo-lg">
                     <img src="./img/icon/logo-lg.png" alt="">
@@ -546,7 +487,62 @@
             </nav> -->
 
         </div>
-        <div class="container text-center m-s-260">
+    <div class="wrapper vw-100">
+        <!-- 2.nav -->
+        <nav class="navbar-expand-lg bg-white sticky-top">
+            <div class="container-fluid navbar">
+                <div class="d-flex">
+                    <a href="#"><img class="nav-logo-sm" src="./img/icon/logo-dark-sm.png" alt=""></a>
+                    <a class="navbar-brand ms-3 me-4" href="#"><i class="bi bi-list bi-nav"></i></a>
+                    <div class="d-none d-lg-block">
+                        <form class="d-flex position-relative" role="search">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            <i class="bi bi-search position-absolute bi-nav icon"></i>
+                            <button class="btn btn-outline-success" type="submit" id="nav-search">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <ul class="d-flex gap-4 align-items-center">
+                    <li><a href="#"><i class="bi bi-search icon d-lg-none bi-nav"></i></a></li>
+                    <li>
+                        <div class="btn-group" role="group">
+                            <button type="button"
+                                class="btn btn-primary dropdown-toggle contry-btn d-flex align-items-center justify-content-center"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="country-img me-1" src="./img/icon/us.jpg" alt="">
+                                <span class="nav-color me-1 d-none d-lg-block">English</span>
+                                <i class="bi bi-chevron-down bi-small"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                                <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="">
+                        </a>
+                    </li>
+
+                    <li><a href="#"><i class="bi bi-bell icon bi-nav"></i></a></li>
+                    <li class="d-none d-sm-block"><a href="#">
+
+                            <i class="bi bi-grid icon bi-nav"></i></a></li>
+                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-gear icon bi-nav"></i></a></li>
+                    <li class="d-none d-sm-block"><a href="#"><i class="bi bi-moon icon bi-nav"></i></a></li>
+                    <li class="d-none d-md-block"><a href="#"><i class="bi bi-fullscreen icon bi-nav"></i></a></li>
+                    <li><a href="#" class="d-flex align-items-center nav-user">
+                            <img class="avatar" src="./img/icon/avatar-1.jpg" alt="">
+                            <div class="d-flex flex-column gap-1 d-none d-lg-block">
+                                <h5 class="my-0 nav-color">Dominic Keller</h5>
+                                <h6 class="my-0 nav-color">Founder</h6>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+
+
+        </nav>
+        
+        <div class="container text-center">
             <div class="row">
                 <div class="col">
                     Column
