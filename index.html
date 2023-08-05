@@ -287,11 +287,31 @@
                 height: 100%;
                 background-color: #313A46;
             }
+
+            .visibi-hidden {}
+
+            ul.func-menu>li>a {
+                height: 40px;
+            }
+
+            .func-item-title {
+                display: none;
+            }
+
+            ul.func-menu>li>a>span {
+                display: none;
+            }
+
             .logo-lg {
                 display: none;
             }
+
             .logo-sm {
                 display: block;
+            }
+            .help-box {
+                display: none;
+                visibility: hidden;
             }
         }
 
@@ -305,6 +325,9 @@
         @media (max-width: 767px) {
             .nav-logo-sm {
                 display: block;
+            }
+            .side-menu {
+                display: none;
             }
         }
 
