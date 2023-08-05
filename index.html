@@ -34,20 +34,25 @@
         }
 
 
-        .page-title-box .breadcrumb {
+        /* .page-title-box .breadcrumb {
             font-size: 18px;
             margin: 0;
-            line-height: 25px;
+            line-height: 25px; */
             /* 原75 */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            /* /* /* ? */
-        }
+            /* overflow: hidden;
+        } */
+/* 變成小於768才有我所設大小的效果,所以我先馬掉 */
 
         #tooltip-container-1 {
             width: 630px;
             height: 15px;
             /* background-color: aquamarine; */
+        }
+
+        @media (max-width: 768px) {
+            .eCommerce {
+                display: none;
+            }
         }
 
         /* .line{
@@ -74,11 +79,11 @@
         }
 
         .line {
-            width: 30.5%;
+            width: 30.8%;
             height: 3px;
             background-color: blue;
             position: absolute;
-            left: 2.2%;
+            left: 2%;
         }
     </style>
 </head>
@@ -141,22 +146,25 @@
         </nav>
         <div class="container text-center m-s-260 bg-secondary-subtle">
             <!-- <div class="container-fluid  bg-primary"></div> -->
-            <div class="row">
+            <div class="row ">
                 <!-- -xxl -->
                 <div class="col-12">
-                    <div class="page-title-box mt-4 ">
+                    <div class="page-title-box  mt-4 ">
                         <ul class="breadcrumb d-flex justify-content-between">
-                            <li class="border border-primary ">
-                                Order Details
+                            <li>
+                                <h4 class="page-title">Order Details</h4>
                             </li>
-                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                                <ol class="breadcrumb d-flex fs-6">
-                                    <li class="breadcrumb-item "><a href="#" class="text-decoration-none">Hyper</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"><a href="#"
-                                            class="text-decoration-none">eCommerce</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Order Details</li>
-                                </ol>
-                            </nav>
+                            <div class="eCommerce">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb d-flex fs-6">
+                                        <li class="breadcrumb-item "><a href="#" class="text-decoration-none">Hyper</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                                                class="text-decoration-none">eCommerce</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+                                    </ol>
+                                </nav>
+                            </div>
                         </ul>
                     </div>
                 </div>
