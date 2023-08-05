@@ -200,8 +200,6 @@
             background-color: #f0f3f8;
         }
 
-
-
         .side-menu {
             width: 334px;
             height: 100%;
@@ -281,6 +279,111 @@
             color: #fff;
         }
 
+        /* content page */
+        .page-head {
+            padding: 0 1.5rem;
+            margin-top: 20px;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            float: left;
+            padding-right: var(--bs-breadcrumb-item-padding-x);
+            color: var(--bs-breadcrumb-divider-color);
+            content: var(--bs-breadcrumb-divider, ">");
+        }
+
+        .page-title {
+            font-size: 18px;
+            color: #6C757D;
+        }
+
+        .content-page {
+            position: relative;
+            padding: 0 .75rem 60px;
+        }
+
+        .footer {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            padding: 0 1.5rem;
+            border-top: 1px solid #dee2e6;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: rgba(108, 117, 125, 0.75);
+        }
+
+        .footer-a {
+            color: rgba(108, 117, 125, 0.75);
+            margin-left: 1.5rem;
+        }
+
+        .card {
+            border: 0;
+            margin-bottom: 1.5rem;
+            box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+            flex-grow: 1;
+
+        }
+
+        .col-lg-4 {
+            display: flex;
+        }
+
+        .flexible-height {}
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1 1 auto;
+            color: #6C757D;
+            background-color: #fff;
+            /* height: 200px; */
+        }
+
+        .header-title {
+            text-transform: uppercase;
+            letter-spacing: .02em;
+            font-size: .9rem;
+            font-weight: 700;
+
+        }
+
+        .card-subtitle {
+            font-weight: 700;
+            margin-right: .75rem;
+            margin-bottom: 10px;
+        }
+
+        address {
+            margin-bottom: 0;
+        }
+
+        .table {
+            border-color: #dbe0e5;
+        }
+
+        .table-light {
+            font-size: 14px;
+            font-weight: 300;
+            color: #313a46;
+            background-color: #EEF2F7;
+        }
+
+        .table>thead>tr>th {
+            color: #313A46;
+        }
+
+
+        .table>:not(caption)>*>* {
+            color: #6C757D;
+            font-size: 14px;
+            padding: 0.95rem 0.95rem;
+
+        }
+
         @media (max-width: 1140px) {
             .side-menu {
                 width: 70px;
@@ -309,10 +412,12 @@
             .logo-sm {
                 display: block;
             }
+
             .help-box {
                 display: none;
                 visibility: hidden;
             }
+            
         }
 
         @media (max-width: 992px) {
@@ -326,9 +431,11 @@
             .nav-logo-sm {
                 display: block;
             }
+
             .side-menu {
                 display: none;
             }
+            
         }
 
         @media (max-width: 376px) {
@@ -585,23 +692,197 @@
 
 
         </nav>
+        <div class="content-page overflow-y-scroll">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between page-head">
+                        <h4 class="page-title fw-bold">Order Details</h4>
+                        <ol class="breadcrumb  pt-2">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        Column
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-body text-start">
+                                <h4 class="mb-4 header-title">Items from Order #12537</h4>
+                                <table class="table">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Quantity</th>
+                                            <th>Price</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>The Military Duffle Bag</td>
+                                            <td>3</td>
+                                            <td>$128</td>
+                                            <td>$384</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mountain Basket Ball</td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>$199</td>
+                                            <td>
+                                                $199
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wavex Canvas Messenger Bag</td>
+                                            <td>5</td>
+                                            <td>$180</td>
+                                            <td>$900</td>
+                                        </tr>
+                                        <tr>
+                                            <td>The Utility Shirt</td>
+                                            <td>2</td>
+                                            <td>$79</td>
+                                            <td>$158</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body text-start">
+                                <h4 class="mb-4 header-title">Order Summary</h4>
+                                <table class="table">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Description</th>
 
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    Column
+                                            <th>Price</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Grand Total :</td>
+
+                                            <td>$1641</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Shipping Charge :</td>
+
+                                            <td>$23</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Estimated Tax : </td>
+
+                                            <td>$19.22</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Total :</td>
+
+                                            <td class="fw-bold">$1683.22</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    Column
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body text-start">
+                                <h4 class="mb-4 header-title">Shipping Information</h4>
+                                <h5 class="card-subtitle">Stanley Jones</h5>
+                                <address>
+                                    795 Folsom Ave, Suite 600<br>
+                                    San Francisco, CA 94107<br>
+                                    <abbr title="phone">P:</abbr>
+                                    (123) 456-7890 <br>
+                                    <abbr title="Mobile">M:</abbr>
+                                    (+01) 12345 67890 <br>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body text-start">
+                                <h4 class="mb-4 header-title">Billing Information</h4>
+                                <p class="mb-2">
+                                    <span class="card-subtitle">Payment Type:</span>
+                                    <span>Credit Card</span>
+                                </p>
+                                <p class="mb-2">
+                                    <span class="card-subtitle">PProvider:</span>
+                                    <span> Visa ending in 2851</span>
+                                </p>
+                                <p class="mb-2">
+                                    <span class="card-subtitle">Valid Date:</span>
+                                    <span>02/2020</span>
+                                </p>
+                                <p class="mb-2">
+                                    <span class="card-subtitle">CVV:</span>
+                                    <span>xxx</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body text-start">
+                                <h4 class="mb-4 header-title">Delivery Info</h4>
+                                <div class="text-center">
+                                    <i class="bi bi-truck"></i>
+                                    <h5 class="card-subtitle">UPS Delivery</h5>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle">Order ID :</span>
+                                        <span> xxxx235</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle">Payment Mode :</span>
+                                        <span>COD</span>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    Column
-                </div>
+
+                <footer class="footer fixed-bottom">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start">
+                                2023 © Hyper - Coderthemes.com
+
+                            </div>
+                            <div class="col-md-6 text-end d-none d-md-block">
+                                <div>
+                                    <a href="#" class="footer-a">About</a>
+                                    <a href="#" class="footer-a">Support</a>
+                                    <a href="#" class="footer-a">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
             </div>
-        </div>
-    </div>
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
+            <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
