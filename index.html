@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         html {
             --ct-body-bg: #fafbfe;
             --ct-topbar-item-color: #6c757d;
@@ -384,6 +388,94 @@
 
         }
 
+        .breadcrumb-item>a {
+            color: #727CF5;
+        }
+
+        .breadcrumb-item:last-child {
+            color: rgba(108, 117, 125, 0.75);
+        }
+
+        .horizontal-steps,
+        .horizontal-steps-content {
+            width: 100%;
+        }
+
+        .horizontal-steps::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 0.2em;
+            background-color: #dee2e6;
+        }
+
+        .step-item {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #727cf5;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .progress-container {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            /*all available space is placed(evenly) between the first and last items*/
+            margin-bottom: 30px;
+            /*to leave some space between steps and buttons*/
+            max-width: 100%;
+            width: 350px;
+        }
+
+
+        .progress {
+            background-color: var(--line-border-fill);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 4px;
+            width: 0%;
+            transform: translateY(-50%);
+            /*minus to move up in y axis*/
+            z-index: -1;
+            transition: 0.4s ease-in;
+        }
+
+        .progress-container::before {
+            content: '';
+            /*must mentioned otherwise before after property will not work*/
+            background-color: #dee2e6;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: .2em;
+            width: 100%;
+            transform: translateY(-50%);
+            /*minus to move up in y axis*/
+            z-index: -1;
+            transition: 0.4s ease-in;
+        }
+
+        .circle {
+            background-color: #727cf5;
+            border-radius: 50%;
+            height: 8px;
+            width: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .circle.active {
+            border-color: var(--line-border-fill);
+        }
+
         @media (max-width: 1140px) {
             .side-menu {
                 width: 70px;
@@ -417,14 +509,10 @@
                 display: none;
                 visibility: hidden;
             }
-            
+
         }
 
-        @media (max-width: 992px) {
-            .nav-logo-sm {
-                display: block;
-            }
-        }
+        @media (max-width: 992px) {}
 
 
         @media (max-width: 767px) {
@@ -432,10 +520,14 @@
                 display: block;
             }
 
+            .nav-logo-sm {
+                display: block;
+            }
+
             .side-menu {
                 display: none;
             }
-            
+
         }
 
         @media (max-width: 376px) {
@@ -698,191 +790,213 @@
                     <div class="col-12 d-flex justify-content-between page-head">
                         <h4 class="page-title fw-bold">Order Details</h4>
                         <ol class="breadcrumb  pt-2">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            <li class="breadcrumb-item"><a href="#">Hyper</a></li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="#">eCommerce</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Order Details</li>
                         </ol>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-10 col-sm-11">
+                        <div class="horizontal-steps mt-5 mb-5 pb-5">
+                            <div
+                                class="horizontal-steps-content d-flex position-relative justify-content-between align-items-center">
+                                <div class="step-item"></div>
+                                <div class="step-item"></div>
+                                <div class="step-item"></div>
+                                <div class="step-item"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-12">
-                        Column
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body text-start">
-                                <h4 class="mb-4 header-title">Items from Order #12537</h4>
-                                <table class="table">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Item</th>
-                                            <th>Quantity</th>
-                                            <th>Price</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>The Military Duffle Bag</td>
-                                            <td>3</td>
-                                            <td>$128</td>
-                                            <td>$384</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mountain Basket Ball</td>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>$199</td>
-                                            <td>
-                                                $199
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Wavex Canvas Messenger Bag</td>
-                                            <td>5</td>
-                                            <td>$180</td>
-                                            <td>$900</td>
-                                        </tr>
-                                        <tr>
-                                            <td>The Utility Shirt</td>
-                                            <td>2</td>
-                                            <td>$79</td>
-                                            <td>$158</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body text-start">
-                                <h4 class="mb-4 header-title">Order Summary</h4>
-                                <table class="table">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>Description</th>
-
-                                            <th>Price</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Grand Total :</td>
-
-                                            <td>$1641</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Shipping Charge :</td>
-
-                                            <td>$23</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Estimated Tax : </td>
-
-                                            <td>$19.22</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="fw-bold">Total :</td>
-
-                                            <td class="fw-bold">$1683.22</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body text-start">
-                                <h4 class="mb-4 header-title">Shipping Information</h4>
-                                <h5 class="card-subtitle">Stanley Jones</h5>
-                                <address>
-                                    795 Folsom Ave, Suite 600<br>
-                                    San Francisco, CA 94107<br>
-                                    <abbr title="phone">P:</abbr>
-                                    (123) 456-7890 <br>
-                                    <abbr title="Mobile">M:</abbr>
-                                    (+01) 12345 67890 <br>
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body text-start">
-                                <h4 class="mb-4 header-title">Billing Information</h4>
-                                <p class="mb-2">
-                                    <span class="card-subtitle">Payment Type:</span>
-                                    <span>Credit Card</span>
-                                </p>
-                                <p class="mb-2">
-                                    <span class="card-subtitle">PProvider:</span>
-                                    <span> Visa ending in 2851</span>
-                                </p>
-                                <p class="mb-2">
-                                    <span class="card-subtitle">Valid Date:</span>
-                                    <span>02/2020</span>
-                                </p>
-                                <p class="mb-2">
-                                    <span class="card-subtitle">CVV:</span>
-                                    <span>xxx</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body text-start">
-                                <h4 class="mb-4 header-title">Delivery Info</h4>
-                                <div class="text-center">
-                                    <i class="bi bi-truck"></i>
-                                    <h5 class="card-subtitle">UPS Delivery</h5>
-                                    <p class="mb-2">
-                                        <span class="card-subtitle">Order ID :</span>
-                                        <span> xxxx235</span>
-                                    </p>
-                                    <p class="mb-2">
-                                        <span class="card-subtitle">Payment Mode :</span>
-                                        <span>COD</span>
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <footer class="footer fixed-bottom">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6 text-center text-md-start">
-                                2023 © Hyper - Coderthemes.com
-
-                            </div>
-                            <div class="col-md-6 text-end d-none d-md-block">
-                                <div>
-                                    <a href="#" class="footer-a">About</a>
-                                    <a href="#" class="footer-a">Support</a>
-                                    <a href="#" class="footer-a">Contact Us</a>
+                        <div class="step">
+                            <div class="container">
+                                <div class="progress-container">
+                                    <div class="progress" id="progress"></div>
+                                    <!--Id is assigned to a class/element when it has to be styled differently-->
+                                    <div class="circle active"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
+                                    <div class="circle"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </footer>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="mb-4 header-title">Items from Order #12537</h4>
+                                    <table class="table">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>The Military Duffle Bag</td>
+                                                <td>3</td>
+                                                <td>$128</td>
+                                                <td>$384</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mountain Basket Ball</td>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>$199</td>
+                                                <td>
+                                                    $199
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wavex Canvas Messenger Bag</td>
+                                                <td>5</td>
+                                                <td>$180</td>
+                                                <td>$900</td>
+                                            </tr>
+                                            <tr>
+                                                <td>The Utility Shirt</td>
+                                                <td>2</td>
+                                                <td>$79</td>
+                                                <td>$158</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="mb-4 header-title">Order Summary</h4>
+                                    <table class="table">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Description</th>
 
-            </div>
+                                                <th>Price</th>
 
-            <script src="./js/bootstrap.bundle.min.js"></script>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Grand Total :</td>
+
+                                                <td>$1641</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Shipping Charge :</td>
+
+                                                <td>$23</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Estimated Tax : </td>
+
+                                                <td>$19.22</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Total :</td>
+
+                                                <td class="fw-bold">$1683.22</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="mb-4 header-title">Shipping Information</h4>
+                                    <h5 class="card-subtitle">Stanley Jones</h5>
+                                    <address>
+                                        795 Folsom Ave, Suite 600<br>
+                                        San Francisco, CA 94107<br>
+                                        <abbr title="phone">P:</abbr>
+                                        (123) 456-7890 <br>
+                                        <abbr title="Mobile">M:</abbr>
+                                        (+01) 12345 67890 <br>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="mb-4 header-title">Billing Information</h4>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle">Payment Type:</span>
+                                        <span>Credit Card</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle">PProvider:</span>
+                                        <span> Visa ending in 2851</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle">Valid Date:</span>
+                                        <span>02/2020</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle">CVV:</span>
+                                        <span>xxx</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="mb-4 header-title">Delivery Info</h4>
+                                    <div class="text-center">
+                                        <i class="bi bi-truck"></i>
+                                        <h5 class="card-subtitle">UPS Delivery</h5>
+                                        <p class="mb-2">
+                                            <span class="card-subtitle">Order ID :</span>
+                                            <span> xxxx235</span>
+                                        </p>
+                                        <p class="mb-2">
+                                            <span class="card-subtitle">Payment Mode :</span>
+                                            <span>COD</span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="footer fixed-bottom">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 text-center text-md-start">
+                                    2023 © Hyper - Coderthemes.com
+
+                                </div>
+                                <div class="col-md-6 text-end d-none d-md-block">
+                                    <div>
+                                        <a href="#" class="footer-a">About</a>
+                                        <a href="#" class="footer-a">Support</a>
+                                        <a href="#" class="footer-a">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+
+                <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
