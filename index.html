@@ -12,6 +12,14 @@
             box-sizing: border-box;
         }
 
+        /* body {
+            overflow-x: hidden;
+        } */
+        body {
+            font-family: "Nunito", sans-serif;
+            color: #6C757D;
+        }
+
         .wrapper {
             height: 100%;
             height: 100%;
@@ -38,15 +46,20 @@
             font-size: 18px;
             margin: 0;
             line-height: 25px; */
-            /* 原75 */
-            /* overflow: hidden;
+        /* 原75 */
+        /* overflow: hidden;
         } */
-/* 變成小於768才有我所設大小的效果,所以我先馬掉 */
+        /* 變成小於768才有我所設大小的效果,所以我先馬掉 */
 
         #tooltip-container-1 {
             width: 630px;
             height: 15px;
             /* background-color: aquamarine; */
+        }
+
+        .page-title {
+            font-size: 1.1rem;
+            margin-left: 10px;
         }
 
         @media (max-width: 768px) {
@@ -67,7 +80,7 @@
             background-color: blue;
             border-radius: 50%;
             /* border: 0.25em solid var(--ct-body-bg); */
-            border: 0.25em solid rgb(246, 224, 224);
+            border: 0.25em solid rgb(253, 250, 250);
             /* ? */
         }
 
@@ -76,6 +89,7 @@
             height: 3px;
             background-color: darkgray;
             position: relative;
+            font-size: 0.9rem;
         }
 
         .line {
@@ -85,6 +99,78 @@
             position: absolute;
             left: 2%;
         }
+
+        .card .header-title {
+            letter-spacing: 0.02em;
+            /* 字寬 */
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .card {
+            border: 0;
+            box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+            flex-grow: 1;
+
+        }
+
+        tbody>tr td {
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+
+        }
+
+        .table>:not(caption)>*>* {
+            color: #6C757D;
+            font-size: 14px;
+            padding: 0.95rem 0.95rem;
+
+        }
+
+        th {
+            color: black !important;
+        }
+
+        .card-body,
+        h4,
+        h5,
+        address,
+        abbr {
+            color: #6C757D;
+            font-size: 14px;
+        }
+
+        .card-subtitle,
+        address.address-lg {
+            line-height: 24px;
+        }
+
+        .bi::before {
+            width: 30px;
+            height: 30px;
+
+        }
+        .container-fluid{
+            position: relative;
+        }
+        .footer {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            padding: 0 1.5rem;
+            top: 100%;
+            left: 0;
+            right: 0;
+            color: rgba(108, 117, 125, 0.75);
+        }
+
+        .footer-links a {
+            color: rgba(108, 117, 125, 0.75);
+        }
+        
     </style>
 </head>
 
@@ -119,7 +205,7 @@
             </nav>
         </div>
         <!-- 2.nav -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary m-s-260  border border-primary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary m-s-260 ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -144,15 +230,13 @@
                 </div> -->
             </div>
         </nav>
-        <div class="container text-center m-s-260 bg-secondary-subtle">
-            <!-- <div class="container-fluid  bg-primary"></div> -->
+        <div class="container-fluid text-center m-s-260 bg-light ">
             <div class="row ">
-                <!-- -xxl -->
                 <div class="col-12">
                     <div class="page-title-box  mt-4 ">
                         <ul class="breadcrumb d-flex justify-content-between">
                             <li>
-                                <h4 class="page-title">Order Details</h4>
+                                <h4 class="page-title fw-bolder">Order Details</h4>
                             </li>
                             <div class="eCommerce">
                                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -188,42 +272,169 @@
                     </div>
                 </div>
                 <div class="container text-center">
-                    <div class="row  border border-primary">
-                        <div class="col-lg-8 ">
-                            <div class="p-3">1Row column</div>
+                    <div class="row ">
+                        <div class="col-lg-8 p-4">
+                            <div class="card">
+                                <div class="card-body text-start ">
+                                    <h4 class="header-title mb-3">ITEMS FROM ORDER #12537</h4>
+                                    <div class="table-responsive ">
+                                        <table class="table mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>The Military Duffle Bag</td>
+                                                    <td>3</td>
+                                                    <td>$128</td>
+                                                    <td>$384</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mountain Basket Ball</td>
+                                                    <td>1</td>
+                                                    <td>$199</td>
+                                                    <td>$199</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wavex Canvas Messenger Bag</td>
+                                                    <td>5</td>
+                                                    <td>$180</td>
+                                                    <td>$900</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>The Utility Shirt</td>
+                                                    <td>2</td>
+                                                    <td>$79</td>
+                                                    <td>$158</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="p-3">2Row column</div>
-                        </div> 
+                        <div class="col-lg-4 p-4">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="header-title mb-3">Order Summary</h4>
+                                    <div class="table-responsive">
+                                        <table class="table mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Description</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Grand Total :</td>
+                                                    <td>$1641</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shipping Charge :</td>
+                                                    <td>$23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Estimated Tax : </td>
+                                                    <td>$19.22</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total :</th>
+                                                    <th>$1683.22</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row  border border-primary">
-                        <div class ="  col-lg-4 col-12">
-                            <div class="p-3">3Row column</div>
+                    <div class="row  text-start">
+                        <div class="col-lg-4 col-12">
+                            <div class="card">
+                                <div class="card-body ">
+                                    <!-- text-start -->
+                                    <h4 class=" header-title mb-3 fw-bolder">Shipping Information</h4>
+                                    <h5 class="card-subtitle fw-bolder">Stanley Jones</h5>
+                                    <address class="md-0 font-14 address-lg">
+                                        795 Folsom Ave, Suite 600<br>
+                                        San Francisco, CA 94107<br>
+                                        <abbr title="phone">P : </abbr>
+                                        (123) 456-7890 <br>
+                                        <abbr title="Mobile">M : </abbr>
+                                        (+01) 12345 67890 <br>
+                                    </address>
+                                </div>
+                            </div>
                         </div>
-                        <div class ="  col-lg-4 col-12">
-                            <div class="p-3">4Row column</div>
+                        <div class="  col-lg-4 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- text-start -->
+                                    <h4 class="header-title mb-3 fw-bolder">Billing Information</h4>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle fw-bolder">Payment Type : </span>
+                                        <span>Credit Card</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle fw-bolder">PProvider : </span>
+                                        <span> Visa ending in 2851</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle fw-bolder">Valid Date : </span>
+                                        <span>02/2020</span>
+                                    </p>
+                                    <p class="mb-2">
+                                        <span class="card-subtitle fw-bolder">CVV : </span>
+                                        <span>xxx</span>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class ="  col-lg-4 col-12">
-                            <div class="p-3">5Row column</div>
+                        <div class="  col-lg-4 col-12">
+                            <div class="card">
+                                <div class="card-body text-start">
+                                    <h4 class="mb-4 header-title fw-bolder">Delivery Info</h4>
+                                    <div class="text-center">
+                                        <i class="bi bi-truck"></i>
+                                        <h5 class="card-subtitle fw-bolder">UPS Delivery</h5>
+                                        <p class="mb-2">
+                                            <span class="card-subtitle fw-bolder">Order ID :</span>
+                                            <span> xxxx235</span>
+                                        </p>
+                                        <p class="mb-2">
+                                            <span class="card-subtitle fw-bolder">Payment Mode :</span>
+                                            <span>COD</span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
-                   </div>
-                <div class="row  ">
-                    <div class="col-md-6 border-top border-secondary">6Row column</div>
-                    <div class="col-md-6 border-top border-secondary">7Row column</div>
+                    </div>
+                    <div class="footer">
+                        <div class="container-fluid px-4">
+                            <div class="row ">
+                                <div class="col-md-6 border-top border-secondary text-start  px-2 ">
+                                    2023 © Hyper - Coderthemes.com
+                                </div>
+                                <div class="col-md-6 border-top border-secondary d-none d-md-block">
+                                    <div class="text-md-end footer-links d-none d-md-block">
+                                        <a href="#" class="text-decoration-none  ">About</a>
+                                        <a href="#" class="text-decoration-none ms-4">Support</a>
+                                        <a href="#" class="text-decoration-none ms-4">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-        
             </div>
-            <!-- <div class="step item-1"> -->
-            <!-- <div class="col">
-                    Column
-                </div>
-                <div class="col">
-                    Column
-                </div>
-                <div class="col">
-                    Column
-                </div> -->
         </div>
     </div>
     </div>
