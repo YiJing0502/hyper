@@ -289,12 +289,13 @@
 
         .func-a {
             display: block;
+            height: 50px;
             width: 100%;
             padding: 15px 10px;
             color: #8391a2;
         }
 
-        .func-a:hover {
+        .func-a:hover, .func-second-a:hover {
             color: #a9bbd1;
 
         }
