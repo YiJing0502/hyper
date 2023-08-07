@@ -47,11 +47,18 @@
         .round-text {
             white-space: nowrap;
         }
+        .table-responsive {
+            overflow-x: auto;
+        }
         @media (max-width: 768px) {
             .round-text {
                 white-space:wrap;
             }
+            .eCommerce {
+                display: none;
+            }
         }
+    
         .round-text-1 {
             white-space: nowrap;
             color: blue;
@@ -61,6 +68,14 @@
             color: blue;
             content: "";
         }
+        .bi.bi-truck {
+            font-size: 20px;
+        }
+        .red-pot {
+            top: 6px;
+            left: 20px;
+        }
+        
     </style>
 </head>
 
@@ -238,7 +253,7 @@
     <div class="wrapper">
         <!-- 2.nav -->
         <nav class="navbar-expand-lg bg-white sticky-top">
-            <div class="container-fluid navbar">
+            <div class="container-fluid navbar shadow-sm px-4">
                 <div class="d-flex">
                     <a href="#"><img class="nav-logo-sm" src="./img/icon/logo-dark-sm.png" alt=""></a>
                     <a class="toggle navbar-brand ms-3 me-4" href="#"><i class="bi bi-list bi-nav"></i></a>
@@ -250,16 +265,16 @@
                         </form>
                     </div>
                 </div>
-                <ul class="d-flex gap-4 align-items-center">
+                <ul class="d-flex gap-3 align-items-center gap-lg-4">
                     <li><a href="#"><i class="bi bi-search icon d-lg-none bi-nav"></i></a></li>
                     <li>
                         <div class="btn-group" role="group">
                             <button type="button"
                                 class="btn btn-primary dropdown-toggle contry-btn d-flex align-items-center justify-content-center"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="country-img me-1" src="./img/icon/us.jpg" alt="">
+                                <img class="country-img me-sm-1" src="./img/icon/us.jpg" alt="">
                                 <span class="nav-color me-1 d-none d-lg-block">English</span>
-                                <i class="bi bi-chevron-down bi-small"></i>
+                                <i class="bi bi-chevron-down bi-small d-none d-sm-block"></i>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Dropdown link</a></li>
@@ -270,14 +285,16 @@
                         </a>
                     </li>
 
-                    <li><a href="#"><i class="bi bi-bell icon bi-nav"></i></a></li>
+                    <li><a href="#"><i class="bi bi-bell icon bi-nav position-relative"><span class="red-pot position-absolute translate-middle p-1 bg-danger border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                      </span></i></a></li>
                     <li class="d-none d-sm-block"><a href="#">
 
                             <i class="bi bi-grid icon bi-nav"></i></a></li>
                     <li class="d-none d-sm-block"><a href="#"><i class="bi bi-gear icon bi-nav"></i></a></li>
                     <li class="d-none d-sm-block"><a href="#"><i class="bi bi-moon icon bi-nav"></i></a></li>
                     <li class="d-none d-md-block"><a href="#"><i class="bi bi-fullscreen icon bi-nav"></i></a></li>
-                    <li><a href="#" class="d-flex align-items-center nav-user">
+                    <li class="shadow-sm"><a href="#" class="d-flex align-items-center nav-user">
                             <img class="avatar" src="./img/icon/avatar-1.jpg" alt="">
                             <div class="d-flex flex-column gap-1 d-none d-lg-block">
                                 <h5 class="my-0 nav-color">Dominic Keller</h5>
@@ -294,7 +311,7 @@
                 <div class="row">
                     <div class="col-12 d-flex justify-content-between page-head">
                         <h4 class="page-title fw-bold">Order Details</h4>
-                        <ol class="breadcrumb  pt-2">
+                        <ol class="breadcrumb  pt-2 eCommerce">
                             <li class="breadcrumb-item"><a href="#">Hyper</a></li>
                             <li class="breadcrumb-item" aria-current="page"><a href="#">eCommerce</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Order Details</li>
@@ -302,7 +319,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-10 col-sm-11">
+                    <div class="col-lg-7 col-md-10 col-sm-11 mt-5 mb-5">
                         <div class="horizontal-steps mt-4 mb-4 pb-5 ">
                             <div class="horizontal-steps-content">
                                 <div class="d-flex justify-content-between d-flex align-items-center process-line ">
@@ -330,46 +347,48 @@
                             <div class="card">
                                 <div class="card-body text-start">
                                     <h4 class="mb-4 header-title">Items from Order #12537</h4>
-                                    <table class="table">
-                                        <thead class="table-light">
-                                            <tr>
-                                                <th>Item</th>
-                                                <th>Quantity</th>
-                                                <th>Price</th>
-                                                <th>Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>The Military Duffle Bag</td>
-                                                <td>3</td>
-                                                <td>$128</td>
-                                                <td>$384</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Mountain Basket Ball</td>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>$199</td>
-                                                <td>
-                                                    $199
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Wavex Canvas Messenger Bag</td>
-                                                <td>5</td>
-                                                <td>$180</td>
-                                                <td>$900</td>
-                                            </tr>
-                                            <tr>
-                                                <td>The Utility Shirt</td>
-                                                <td>2</td>
-                                                <td>$79</td>
-                                                <td>$158</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>The Military Duffle Bag</td>
+                                                    <td>3</td>
+                                                    <td>$128</td>
+                                                    <td>$384</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mountain Basket Ball</td>
+                                                    <td>
+                                                        1
+                                                    </td>
+                                                    <td>$199</td>
+                                                    <td>
+                                                        $199
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wavex Canvas Messenger Bag</td>
+                                                    <td>5</td>
+                                                    <td>$180</td>
+                                                    <td>$900</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>The Utility Shirt</td>
+                                                    <td>2</td>
+                                                    <td>$79</td>
+                                                    <td>$158</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -463,7 +482,7 @@
                                     <h4 class="mb-4 header-title">Delivery Info</h4>
                                     <div class="text-center">
                                         <i class="bi bi-truck"></i>
-                                        <h5 class="card-subtitle">UPS Delivery</h5>
+                                        <h5 class="card-subtitle mt-2">UPS Delivery</h5>
                                         <p class="mb-2">
                                             <span class="card-subtitle">Order ID :</span>
                                             <span> xxxx235</span>
