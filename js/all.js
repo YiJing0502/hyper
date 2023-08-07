@@ -3,10 +3,10 @@ const body = document.querySelector('body'),
       toggle = document.querySelector('.toggle');
       mdSize = window.matchMedia('(max-width: 767px)');
       
-      toggle.addEventListener('click', (e) => {
-        if (e > mdSize) {
+      
+      toggle.addEventListener('click', () => {
+        if (!mdSize.matches)
             sideMenu.classList.toggle('close');
-        }
       })
 
     document.onclick = function(e) {
