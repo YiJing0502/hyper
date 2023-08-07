@@ -41,7 +41,7 @@
         }
 
         .bi-nav {
-            font-size: 22px;
+            font-size: 20px;
         }
 
         .bi-small {
@@ -143,6 +143,7 @@
 
         .dropdown-toggle::after {
             border: none;
+            content: none;
         }
 
         .list {
