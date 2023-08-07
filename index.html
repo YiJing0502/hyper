@@ -16,8 +16,17 @@
             border-radius: 50%;
             /* border: 0.25em solid var(--ct-body-bg); */
             border: 0.25em solid rgb(253, 250, 250);
-            /* ? */
+            position: relative;
+            z-index: 10;
         }
+
+        .round-1 {
+            position: absolute;
+            top: calc(100% + 1em);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+     
 
         .process-line {
             width: 100%;
@@ -34,8 +43,23 @@
             position: absolute;
             left: 2%;
         }
-        .func-span {
-            border-color: red;
+
+        .round-text {
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .round-text {
+                white-space:wrap;
+            }
+        }
+        .round-text-1 {
+            white-space: nowrap;
+            color: blue;
+        }
+        .round-text-1::backdrop {
+            white-space: nowrap;
+            color: blue;
+            content: "";
         }
     </style>
 </head>
