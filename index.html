@@ -72,7 +72,7 @@
         .round {
             width: 14.4px;
             height: 14.4px;
-            background-color: blue;
+            background-color: #727cf5;
             border-radius: 50%;
             /* border: 0.25em solid var(--ct-body-bg); */
             border: 0.25em solid rgb(253, 250, 250);
@@ -86,7 +86,7 @@
             left: 50%;
             transform: translateX(-50%);
         }
-     
+
 
         .process-line {
             width: 100%;
@@ -99,7 +99,7 @@
         .line {
             width: 30.8%;
             height: 3px;
-            background-color: blue;
+            background-color:#727cf5;
             position: absolute;
             left: 2%;
         }
@@ -107,19 +107,56 @@
         .round-text {
             white-space: nowrap;
         }
+
         @media (max-width: 768px) {
             .round-text {
-                white-space:wrap;
+                white-space: wrap;
             }
+        }
+        #flashing{
+            position: relative;
         }
         .round-text-1 {
             white-space: nowrap;
-            color: blue;
+            color: #727cf5;
         }
-        .round-text-1::backdrop {
+
+        #flashing::before {
             white-space: nowrap;
-            color: blue;
+            color: #727cf5;
             content: "";
+            display: block;
+            position: absolute;
+            bottom: -130%;
+            right: -130%;
+            padding: 1em;
+            background-color: currentColor;
+            border-radius: 50%;
+            opacity: 0.5;
+            z-index: -1;
+            animation-name: animation-steps-current;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes animation-steps-current {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(0.5);
+                opacity: 0.5;
+            }
+            75% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
         }
 
         .card .header-title {
@@ -286,7 +323,7 @@
                                             Order Placed</span>
                                     </div>
                                     <div class="line "></div>
-                                    <div class="round ">
+                                    <div class="round  " id="flashing">
                                         <span class="round-text-1 round-1 opacity-50">Packed</span>
                                     </div>
                                     <div class="round">
