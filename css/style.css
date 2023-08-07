@@ -526,8 +526,19 @@
         .circle.active {
             border-color: var(--line-border-fill);
         }
+        .dis-block {
+            display: block;
+        }
+        .side-menu.close .func-second-ul {
+            display: none;
+        }
 
-        @media (max-width: 1140px) {}
+        .side-menu.close .bi-chevron-down, .bi-chevron-right {
+            display: none;
+        }
+
+        @media (max-width: 1140px) {
+        }
 
         @media (max-width: 992px) {}
 

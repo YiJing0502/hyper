@@ -87,6 +87,8 @@ funcA.forEach((element) => {
 });
 
 toggle.addEventListener('click', () => {
+    
+
     if (!mdSize.matches)
         sideMenu.classList.toggle('close');
 })
