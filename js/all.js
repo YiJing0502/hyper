@@ -26,6 +26,7 @@ const body = document.querySelector('body'),
 
     window.addEventListener('resize', () => {
         if (mdSize.matches) {
+            sideMenu.classList.add('side-menu-none')
             sideMenu.classList.remove('close');
             console.log(767);
         } else if (xSize.matches) {

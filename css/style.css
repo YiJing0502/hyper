@@ -353,6 +353,7 @@
         .content-page {
             position: relative;
             padding: 0 .75rem 60px;
+            height: 2000px;
         }
 
         .footer {
