@@ -3,7 +3,8 @@ const body = document.querySelector('body'),
       toggle = document.querySelector('.toggle');
       mdSize = window.matchMedia('(max-width: 767px)');
       xSize = window.matchMedia('(max-width: 1140px)');
-      
+      sideMenuAll = document.querySelectorAll('.side-menu');
+      console.log(sideMenuAll);
       
 
       function closeSideMenu () {
@@ -47,12 +48,21 @@ const body = document.querySelector('body'),
     }
 
     document.addEventListener('click', (e) => {
-        console.log(e.target);
+        console.log(e.target)
+        // if(e.target.classList.contains('side-menu')) return;
+        // console.log(e.target.nodeName);
+        const tarClass = e.target.classList;
+        if (e.target.classList.contains('side-menu') || e.target.closest('.side-menu')) {
+            // If the click event originated from the side menu or its children, return early
+            return;
+        }
+        // if (tarClass.contains('func-a') || tarClass.contains('func-item') || tarClass.contains('func-span') || tarClass.contains('func-i') || tarClass.contains('func-item-title') || tarClass.contains('badge') || tarClass.contains('help-box') ) return;
+        // if(e.target.classList.contains('func-a', 'func-item', 'func-span', 'func-i', 'func-item-title', 'badge')) return;
         // console.log(e.target.classList.contains('func-item'));
+        // , 
         if (e.target.classList.contains('bi-list')) {
             console.log('contains');
             sideMenu.classList.remove('side-menu-none')
-
         } else {
             sideMenu.classList.add('side-menu-none')
             console.log('not contains');
@@ -64,6 +74,3 @@ const body = document.querySelector('body'),
         if (!mdSize.matches)
             sideMenu.classList.toggle('close');
     })
-    
-
-console.log(toggle);
