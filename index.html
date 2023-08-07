@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .round {
+            width: 14.4px;
+            height: 14.4px;
+            background-color: blue;
+            border-radius: 50%;
+            /* border: 0.25em solid var(--ct-body-bg); */
+            border: 0.25em solid rgb(253, 250, 250);
+            /* ? */
+        }
 
+        .process-line {
+            width: 100%;
+            height: 3px;
+            background-color: darkgray;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .line {
+            width: 30.8%;
+            height: 3px;
+            background-color: blue;
+            position: absolute;
+            left: 2%;
+        }
+        .func-span {
+            border-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,143 +59,144 @@
                 <a href="#" class="func-a">
                     <i class="bi bi-house func-i"></i>
                     <span class="badge bg-success float-end">5</span>
-                    <span>Dashboards</span>
+                    <span class="func-span">Dashboards</span>
                 </a>
             </li>
             <li class="func-item-title">Apps</li>
             <li class="func-item">
                 <a href="#" class="func-a">
-                    <i class="bi bi-calendar func-i"></i> <span>Calendar</span>
+                    <i class="bi bi-calendar func-i"></i>
+                    <span class="func-span">Calendar</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-chat-right-text func-i"></i>
-                    <span>Chat</span>
+                    <span class="func-span">Chat</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-compass func-i"></i>
                     <span class="badge text-bg-danger  float-end">New</span>
-                    <span>CRM</span>
+                    <span class="func-span">CRM</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-shop func-i"></i>
-                    <span>Ecommerce</span>
+                    <span class="func-span">Ecommerce</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-envelope func-i"></i>
-                    <span>Email</span>
+                    <span class="func-span">Email</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-briefcase-fill func-i"></i>
-                    <span>Projects</span>
+                    <span class="func-span">Projects</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-wifi func-i"></i>
-                    <span>Social Feed</span>
+                    <span class="func-span">Social Feed</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-list-task func-i"></i>
-                    <span>Tasks</span>
+                    <span class="func-span">Tasks</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-folder2 func-i"></i>
-                    <span>File Manager</span>
+                    <span class="func-span">File Manager</span>
                 </a>
             </li>
             <li class="func-item-title">Custom</li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-file-earmark func-i"></i>
-                    <span>Pages</span>
+                    <span class="func-span">Pages</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-globe func-i"></i>
                     <span class="badge text-bg-secondary float-end">New</span>
-                    <span>Landing</span>
+                    <span class="func-span">Landing</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-layout-three-columns func-i"></i>
-                    <span>Layouts</span>
+                    <span class="func-span">Layouts</span>
                 </a>
             </li>
             <li class="func-item-title">Components</li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-box-seam func-i"></i>
-                    <span>Base UI</span>
+                    <span class="func-span">Base UI</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-clipboard2 func-i"></i>
-                    <span>Extended UI</span>
+                    <span class="func-span">Extended UI</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-layers-half func-i"></i>
-                    <span>Widgets</span>
+                    <span class="func-span">Widgets</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-palette func-i"></i>
-                    <span>Icons</span>
+                    <span class="func-span">Icons</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-bar-chart func-i"></i>
-                    <span>Charts</span>
+                    <span class="func-span">Charts</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-file-text func-i"></i>
-                    <span>Forms</span>
+                    <span class="func-span">Forms</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-table func-i"></i>
-                    <span>Tables</span>
+                    <span class="func-span">Tables</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-table func-i"></i>
-                    <span>Tables</span>
+                    <span class="func-span">Tables</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-geo-alt func-i"></i>
-                    <span>Maps</span>
+                    <span class="func-span">Maps</span>
                 </a>
             </li>
             <li class="func-item">
                 <a href="#" class="func-a">
                     <i class="bi bi-folder-plus func-i"></i>
-                    <span>Multi Level</span>
+                    <span class="func-span">Multi Level</span>
                 </a>
             </li>
             <!-- help box -->
@@ -176,34 +206,9 @@
                 <h5 class="mt-4 text-white">Unlimited Access</h5>
                 <p class="text-white text-center">Upgrade to plan to get access to unlimited reports</p>
                 <button type="button" class="btn btn-secondary">Upgrade</button>
-
             </div>
 
         </ul>
-        <!-- <nav class="d-flex flex-column">
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-                <a href="#">Page</a>
-            </nav> -->
 
     </div>
     <div class="wrapper vh-100">
@@ -273,20 +278,20 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                        <div class="col-lg-7 col-md-10 col-sm-11">
-                            <div class="horizontal-steps mt-4 mb-4 pb-5">
-                                <div class="horizontal-steps-content" id="tooltip-container-1 ">
-                                    <div class="d-flex justify-content-between d-flex align-items-center process-line ">
-                                        <!-- <div class="process ">  -->
-                                        <div class="round "></div>
-                                        <div class="line "></div>
-                                        <div class="round "></div>
-                                        <div class="round "></div>
-                                        <div class="round bg-success bg-gradient"></div>
-                                    </div>
+                    <div class="col-lg-7 col-md-10 col-sm-11">
+                        <div class="horizontal-steps mt-4 mb-4 pb-5">
+                            <div class="horizontal-steps-content" id="tooltip-container-1 ">
+                                <div class="d-flex justify-content-between d-flex align-items-center process-line ">
+                                    <!-- <div class="process ">  -->
+                                    <div class="round "></div>
+                                    <div class="line "></div>
+                                    <div class="round "></div>
+                                    <div class="round "></div>
+                                    <div class="round bg-success bg-gradient"></div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="card">
@@ -464,7 +469,7 @@
         </div>
         <script src="./js/bootstrap.bundle.min.js"></script>
         <script src="./js/all.js"></script>
-        
+
 </body>
 
 </html>
