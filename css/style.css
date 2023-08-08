@@ -294,6 +294,11 @@
             padding: 15px 10px;
             color: #8391a2;
         }
+        .func-chevron {
+            right: 30px;
+            top: 50%;
+            transform: translateY(-10%);
+        }
 
         .func-a:hover, .func-second-a:hover {
             color: #a9bbd1;
@@ -529,6 +534,7 @@
         .dis-block {
             display: block;
         }
+        
         .side-menu.close .func-second-ul {
             display: none;
         }
@@ -536,7 +542,6 @@
         .side-menu.close .bi-chevron-down, .bi-chevron-right {
             display: none;
         }
-
         @media (max-width: 1140px) {
         }
 
